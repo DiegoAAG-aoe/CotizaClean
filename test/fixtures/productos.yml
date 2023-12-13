@@ -1,15 +1,13 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  Nombre: MyText
-  Tipo: MyString
-  Precio: 1
-  Descripcion: MyText
-  Marca: MyText
+Antigrasa:
+  Nombre: Omo antigrasa
+  Tipo: Antigrasa
+  Precio: 2000
+  Descripcion: Omo antigrasa 1l
+  Marca: Omo
 
 two:
-  Nombre: MyText
-  Tipo: MyString
-  Precio: 1
-  Descripcion: MyText
-  Marca: MyText
+  Nombre: Limpiavidrios repuesto, 420 ml
+  Tipo: Limpiavidrios
+  Precio: 1690
+  Descripcion: Limpiavidrios repuesto
+  Marca: 	Glassex

@@ -5,4 +5,7 @@ class ProductosController < ApplicationController
   def show
         @producto = Producto.find(params[:id])
   end
+  def new
+        
+  end
 end
