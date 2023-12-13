@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :productos
+  resources :categories, except: :show
+  resources :productos, path: '/'
 end
