@@ -1,7 +1,8 @@
 <div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
     <%= category.name %>
-  </p>
-
+    <%= link_to 'Editar', edit_category_path(category) %>
+    <%= link_to 'Eliminar', category_path(category), data: {
+        turbo_method: :delete,
+        turbo_confirm: 'common.confirm'
+    } %>
 </div>
