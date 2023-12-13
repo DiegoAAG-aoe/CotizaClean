@@ -18,4 +18,23 @@ class ProductosControllerTest < ActionDispatch::IntegrationTest
 
 
   end
+
+  test 'render a new producto form' do
+        get new_producto_path
+
+        asser_response :success
+        asser_select 'form'
+  end
+
+  test 'allow to create a new producto' do
+        post productos_path, params: {
+          producto: {
+            Nombre: 'Antigrasa Gold',
+            Descripcion: 'El mejor antigrasa de 2023',
+            Precio: 2500
+          }
+        }
+
+        assert_redirected_to productos_path
+  end
 end
