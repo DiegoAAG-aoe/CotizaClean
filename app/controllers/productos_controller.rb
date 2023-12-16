@@ -1,6 +1,7 @@
 class ProductosController < ApplicationController
   def index
-    @productos = Producto.all.with_attached_photo
+    @categories = Category.order(name: :asc)
+    @productos = Producto.with_attached_photo
   end
   def show
     producto

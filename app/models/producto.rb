@@ -3,4 +3,6 @@ class Producto < ApplicationRecord
   validates :Nombre, presence: true
   validates :Descripcion, presence: true
   validates :Precio, presence: true
+
+  belongs_to :category
 end

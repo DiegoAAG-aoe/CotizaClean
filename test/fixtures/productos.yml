@@ -4,10 +4,20 @@ Antigrasa:
   Precio: 2000
   Descripcion: Omo antigrasa 1l
   Marca: Omo
+  category: Antigrasas
 
-two:
+Limpiavidrios:
   Nombre: Limpiavidrios repuesto, 420 ml
   Tipo: Limpiavidrios
   Precio: 1690
   Descripcion: Limpiavidrios repuesto
   Marca: 	Glassex
+  category: LimpiaVidrios
+
+LimpiadorLiquido:
+  Nombre: Limpiador Líquido Aromatizante Flores de Primavera, 900 ml
+  Tipo: Limpiador de piso diluible
+  Precio: 1390
+  Descripcion: Limpiador Líquido Aromatizante Flores de Primavera
+  Marca: Poett
+  category: Floors and Furniture
