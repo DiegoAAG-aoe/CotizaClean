@@ -1,7 +1,17 @@
 class ProductosController < ApplicationController
   def index
-    @categories = Category.order(name: :asc)
-    @productos = Producto.with_attached_photo
+    pp params[:category_id]
+    @categories = Category.order(name: :asc).load_async
+    @productos = Producto.with_attached_photo.order(created_at: :desc).load_async
+    if params[:category_id]
+      @productos = @productos.where(category_id: params[:category_id])
+    end
+    if params[:min_price].present?
+      @productos = @productos.where("Precio >= ?", params[:min_price])
+    end  
+    if params[:max_price].present?
+      @productos = @productos.where("Precio <= ?", params[:max_price])
+    end  
   end
   def show
     producto

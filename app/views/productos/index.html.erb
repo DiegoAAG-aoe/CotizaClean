@@ -1,5 +1,16 @@
-<h1>Productos:</h1>
+<%= turbo_frame_tag 'categories' do %>
+    <h1>Productos:</h1>
 
-<%= render partial: 'category', collection: @categories %>
+    <%= form_with url: productos_path, method: :get do |form| %>
+        <%= form.number_field :min_price, placeholder: 'Precio minimo', onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
 
-<%= render partial: 'producto', collection: @productos %>
+        <%= form.number_field :max_price, placeholder: 'Precio maximo', onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
+    <% end %>
+
+    <%= link_to 'All', productos_path() %>
+
+    <%= render partial: 'category', collection: @categories %>
+
+    <%= render partial: 'producto', collection: @productos %>
+
+<% end %>
