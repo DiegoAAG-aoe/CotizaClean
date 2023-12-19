@@ -4,6 +4,8 @@
 
 <p class='descripcion'><%= @producto.Descripcion%></p>
 
+<p class='marca'><%= @producto.Marca%></p>
+
 <span class='precio'>$<%= @producto.Precio %></span>
 
 <%= link_to 'Editar producto', edit_producto_path(@producto) %>

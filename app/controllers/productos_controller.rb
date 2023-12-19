@@ -8,10 +8,13 @@ class ProductosController < ApplicationController
     end
     if params[:min_price].present?
       @productos = @productos.where("Precio >= ?", params[:min_price])
-    end  
+    end
     if params[:max_price].present?
       @productos = @productos.where("Precio <= ?", params[:max_price])
-    end  
+    end
+    if params[:query_text].present?
+      @productos = @productos.search_full_text(params[:query_text])
+    end
   end
   def show
     producto

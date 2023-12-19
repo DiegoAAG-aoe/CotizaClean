@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_19_004933) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_19_020414) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -45,6 +48,16 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_19_004933) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "gestors", force: :cascade do |t|
+    t.text "Nombre"
+    t.string "Tipo"
+    t.integer "Precio"
+    t.text "Descripcion"
+    t.text "Marca"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "productos", force: :cascade do |t|
     t.text "Nombre", null: false
     t.string "Tipo"
@@ -53,7 +66,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_19_004933) do
     t.text "Marca"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id", null: false
+    t.bigint "category_id", null: false
     t.index ["category_id"], name: "index_productos_on_category_id"
   end
 
@@ -67,6 +80,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_19_004933) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "tipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

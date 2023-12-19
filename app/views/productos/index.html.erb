@@ -2,9 +2,13 @@
     <h1>Productos:</h1>
     
     <%= form_with url: productos_path, method: :get do |form| %>
+        <%= form.text_field :query_text, placeholder: 'Ingrese Busqueda', onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
+        
         <%= form.number_field :min_price, placeholder: 'Precio minimo', onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
 
         <%= form.number_field :max_price, placeholder: 'Precio maximo', onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
+
+        <%= form.select :order_by %>
     <% end %>
 
     <%= link_to 'All', productos_path() %>

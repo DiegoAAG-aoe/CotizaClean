@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   }
   resources :categories, except: :show
   resources :productos, path: '/productos'
+
+  post '/search', to: 'search#results'
 end
