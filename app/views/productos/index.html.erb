@@ -8,7 +8,7 @@
 
         <%= form.number_field :max_price, placeholder: 'Precio maximo', onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
 
-        <%= form.select :order_by, options_for_select([["Recientes", "newest"], ["Más caros", "expensive"], ["Más baratos", "cheapest"]], params[:order_by]) %>
+        <%= form.select :order_by, options_for_select([["Recientes", "newest"], ["Más caros", "expensive"], ["Más baratos", "cheapest"]], params[:order_by]), {}, { onChange: 'this.form.requestSubmit()' } %>
     <% end %>
 
     <%= link_to 'All', productos_path() %>
