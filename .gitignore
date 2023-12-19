@@ -5,12 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
-
-# Ignore all environment files (except templates).
-/.env*
-!/.env*.erb
-
+# Ignore all environment files (except templates)
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -18,11 +13,6 @@
 !/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
-
-
