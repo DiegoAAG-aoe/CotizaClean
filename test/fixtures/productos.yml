@@ -1,10 +1,10 @@
 Antigrasa:
-  Nombre: Omo antigrasa
-  Tipo: Antigrasa
+  Nombre: Omo detergente
+  Tipo: Detergente
   Precio: 2000
-  Descripcion: Omo antigrasa 1l
+  Descripcion: Omo detergente 1l
   Marca: Omo
-  category: Antigrasas
+  category: Detergentes
 
 Limpiavidrios:
   Nombre: Limpiavidrios repuesto, 420 ml
