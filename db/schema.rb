@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_18_003710) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_19_004933) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -44,6 +44,26 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_18_003710) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+# Could not dump table "fts_posts" because of following StandardError
+#   Unknown type '' for column 'title'
+
+# Could not dump table "fts_posts_config" because of following StandardError
+#   Unknown type '' for column 'k'
+
+# Could not dump table "fts_posts_content" because of following StandardError
+#   Unknown type '' for column 'c0'
+
+  create_table "fts_posts_data", force: :cascade do |t|
+    t.binary "block"
+  end
+
+  create_table "fts_posts_docsize", force: :cascade do |t|
+    t.binary "sz"
+  end
+
+# Could not dump table "fts_posts_idx" because of following StandardError
+#   Unknown type '' for column 'segid'
 
   create_table "productos", force: :cascade do |t|
     t.text "Nombre", null: false
