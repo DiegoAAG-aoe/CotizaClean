@@ -15,15 +15,11 @@ class ProductosController < ApplicationController
     if params[:query_text].present?
       @productos = @productos.search_full_text(params[:query_text])
     end
-    if params[:order_by].present?
-      order_by = {
-         newest: "created_at DESC",
-         expensive: "Precio DESC",
-         cheaper: "Precio ASC"
-       }.fetch(params[:order_by]&.to_sym, "created_at DESC")
 
-        @productos = @productos.order(order_by)
-    end
+      order_by = Producto::ORDER_BY.fetch(params[:order_by]&.to_sym, Producto::ORDER_BY[:newest])
+
+      @productos = @productos.order(order_by).load_async
+
   end
 
   def show

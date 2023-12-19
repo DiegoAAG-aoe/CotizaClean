@@ -7,6 +7,12 @@ class Producto < ApplicationRecord
     Marca: 'C'
   }
 
+  ORDER_BY = {
+    newest: "created_at DESC",
+    expensive: "Precio DESC",
+    cheapest: "Precio ASC"
+  }
+
   has_one_attached :photo
   validates :Nombre, presence: true
   validates :Descripcion, presence: true
