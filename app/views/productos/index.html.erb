@@ -1,6 +1,6 @@
 <%= turbo_frame_tag 'categories' do %>
     <h1>Productos:</h1>
-
+    
     <%= form_with url: productos_path, method: :get do |form| %>
         <%= form.number_field :min_price, placeholder: 'Precio minimo', onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
 

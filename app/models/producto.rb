@@ -6,5 +6,5 @@ class Producto < ApplicationRecord
   validates :Precio, presence: true
 
   belongs_to :category
-  
+
 end
