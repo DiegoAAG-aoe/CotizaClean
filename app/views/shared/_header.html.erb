@@ -3,5 +3,5 @@
 <% end %>
 
 <%= link_to 'Productos', productos_path %>
-<%= link_to 'Añadir Producto', new_producto_path %>
-<%= link_to 'Categorias', categories_path %>
+<%= link_to 'Añadir Producto', new_producto_path if current_user %>
+<%= link_to 'Categorias', categories_path if current_user %>
