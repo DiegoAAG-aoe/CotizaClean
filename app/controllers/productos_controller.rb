@@ -58,7 +58,15 @@ class ProductosController < ApplicationController
   private
 
   def producto_params
+<<<<<<< Updated upstream
         params.require(:producto).permit(:Nombre, :Tipo, :Descripcion, :Precio, :Marca, :photo)
+=======
+    params.require(:producto).permit(:Nombre, :Tipo, :Descripcion, :precio, :Marca, :photo, :category_id)
+  end
+
+  def producto_params_index
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by)
+>>>>>>> Stashed changes
   end
 
   def producto

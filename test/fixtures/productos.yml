@@ -1,7 +1,7 @@
 Antigrasa:
   Nombre: Omo detergente
   Tipo: Detergente
-  Precio: 2000
+  precio: 2000
   Descripcion: Omo detergente 1l
   Marca: Omo
   category: Detergentes
@@ -9,7 +9,7 @@ Antigrasa:
 Limpiavidrios:
   Nombre: Limpiavidrios repuesto, 420 ml
   Tipo: Limpiavidrios
-  Precio: 1690
+  precio: 1690
   Descripcion: Limpiavidrios repuesto
   Marca: 	Glassex
   category: LimpiaVidrios
@@ -17,7 +17,202 @@ Limpiavidrios:
 LimpiadorLiquido:
   Nombre: Limpiador Líquido Aromatizante Flores de Primavera, 900 ml
   Tipo: Limpiador de piso diluible
-  Precio: 1390
+  precio: 1390
   Descripcion: Limpiador Líquido Aromatizante Flores de Primavera
   Marca: Poett
   category: Floors and Furniture
+<<<<<<< Updated upstream
+=======
+
+LimpiadorCrema:
+  Nombre: Crema Cif Bioactive Limpiador Original 750 g
+  Tipo: Limpiador de piso diluible
+  precio: 1390
+  Descripcion: Crema Cif Bioactive Limpiador Original
+  Marca: Cif
+  category: Blanqueadores
+
+Desinfectante:
+  Nombre: Lysoform Desinfectante Multiuso
+  Tipo: Desinfectante
+  precio: 2290
+  Descripcion: Desinfectante para superficies
+  Marca: Lysoform
+  category: Desinfectantes
+
+Detergente:
+  Nombre: Magistral Detergente Líquido Floral 1.5L
+  Tipo: Detergente líquido
+  precio: 1890
+  Descripcion: Detergente con fragancia floral
+  Marca: Magistral
+  category: Detergentes
+
+LimpiadorVidrios:
+  Nombre: Windex Limpiador de Vidrios 500 ml
+  Tipo: Limpiador de vidrios
+  precio: 1590
+  Descripcion: Limpiador eficaz para vidrios y superficies transparentes
+  Marca: Windex
+  category: LimpiaVidrios
+
+Quitamanchas:
+  Nombre: Vanish Oxi Action Quitamanchas en Polvo
+  Tipo: Quitamanchas
+  precio: 2190
+  Descripcion: Elimina manchas difíciles en la ropa
+  Marca: Vanish
+  category: Quitamanchas
+
+LimpiadorPisos:
+  Nombre: Ajax Limpiador Pisos Lavanda 1L
+  Tipo: Limpiador de pisos
+  precio: 1290
+  Descripcion: Fragancia de lavanda para pisos limpios
+  Marca: Ajax
+  category: Floors and Furniture
+
+Desengrasante:
+  Nombre: Quix Desengrasante Multiuso 500 ml
+  Tipo: Desengrasante
+  precio: 1690
+  Descripcion: Potente desengrasante para cocina y superficies
+  Marca: Quix
+  category: Desengrasantes
+
+LimpiadorBanos:
+  Nombre: Mr Muscle Limpiador de Baños 750 ml
+  Tipo: Limpiador de baños
+  precio: 1990
+  Descripcion: Limpieza profunda para baños impecables
+  Marca: Mr Muscle
+  category: Baño
+
+Ambientador:
+  Nombre: Glade Ambientador en Aerosol Frescura de Algodón
+  Tipo: Ambientador
+  precio: 1190
+  Descripcion: Aroma fresco de algodón para ambientar el hogar
+  Marca: Glade
+  category: Ambientadores
+
+LimpiaHornos:
+  Nombre: Easy-Off Limpia Hornos en Gel 500 ml
+  Tipo: Limpia Hornos
+  precio: 2490
+  Descripcion: Elimina la grasa y residuos difíciles del horno
+  Marca: Easy-Off
+  category: Limpia Hornos
+
+LimpiadorMuebles:
+  Nombre: Pledge Limpiador de Muebles en Aerosol 300 ml
+  Tipo: Limpiador de muebles
+  precio: 1690
+  Descripcion: Protege y da brillo a tus muebles de madera
+  Marca: Pledge
+  category: Floors and Furniture
+
+LimpiadorInodoro:
+  Nombre: Harpic Limpiador de Inodoros Pastillas Azules
+  Tipo: Limpiador de inodoros
+  precio: 1290
+  Descripcion: Tabletas efervescentes para una limpieza profunda
+  Marca: Harpic
+  category: Baño
+
+LustraMuebles:
+  Nombre: Johnson Lustra Muebles Aerosol 250 ml
+  Tipo: Lustra muebles
+  precio: 1590
+  Descripcion: Da brillo y protección a tus muebles
+  Marca: Johnson
+  category: Floors and Furniture
+
+DesodoranteAmbientes:
+  Nombre: Air Wick Desodorante de Ambientes Lavanda 250 ml
+  Tipo: Desodorante de ambientes
+  precio: 1490
+  Descripcion: Aroma duradero de lavanda para tu hogar
+  Marca: Air Wick
+  category: Ambientadores
+
+LimpiadorAceroInoxidable:
+  Nombre: 3M Limpiador para Acero Inoxidable 500 ml
+  Tipo: Limpiador de acero inoxidable
+  precio: 1890
+  Descripcion: Mantiene el brillo y la limpieza en superficies de acero inoxidable
+  Marca: 3M
+  category: Desengrasantes
+
+Limpia Hornos:
+  Nombre: OvenMaster Limpia Hornos en Gel 500 ml
+  Tipo: Limpia Hornos
+  precio: 2390
+  Descripcion: Elimina la grasa y residuos difíciles del horno
+  Marca: OvenMaster
+  category: Limpia Hornos
+
+Ambientadores:
+  Nombre: AirScent Ambientador en Spray Lavanda 200 ml
+  Tipo: Ambientador
+  precio: 1290
+  Descripcion: Fragancia de lavanda para ambientar el hogar
+  Marca: AirScent
+  category: Ambientadores
+
+Baño:
+  Nombre: BathFresh Limpiador de Baños Espuma Activa 750 ml
+  Tipo: Limpiador de baños
+  precio: 1990
+  Descripcion: Limpieza profunda para baños impecables
+  Marca: BathFresh
+  category: Baño
+
+Quitamanchas:
+  Nombre: StainAway Quitamanchas en Espuma 500 ml
+  Tipo: Quitamanchas
+  precio: 1890
+  Descripcion: Elimina manchas difíciles en todo tipo de telas
+  Marca: StainAway
+  category: Quitamanchas
+
+Detergentes:
+  Nombre: FreshClean Detergente Líquido Aroma Citrus 2L
+  Tipo: Detergente líquido
+  precio: 2090
+  Descripcion: Detergente con aroma cítrico para ropa fresca
+  Marca: FreshClean
+  category: Detergentes
+
+Desinfectantes:
+  Nombre: GermGuard Desinfectante de Superficies 1L
+  Tipo: Desinfectante
+  precio: 2490
+  Descripcion: Desinfectante para la limpieza profunda
+  Marca: GermGuard
+  category: Desinfectantes
+
+Blanqueadores:
+  Nombre: PureWhite Blanqueador en Gel 750 ml
+  Tipo: Blanqueador
+  precio: 2190
+  Descripcion: Blanqueador efectivo para ropa blanca
+  Marca: PureWhite
+  category: Blanqueadores
+
+Floors and Furniture:
+  Nombre: WoodMaster Limpiador para Muebles de Madera 1L
+  Tipo: Limpiador de muebles
+  precio: 1890
+  Descripcion: Protege y da brillo a los muebles de madera
+  Marca: WoodMaster
+  category: Floors and Furniture
+
+Antigrasa:
+  Nombre: SuperClean Desengrasante Potente 500 ml
+  Tipo: Desengrasante
+  precio: 1590
+  Descripcion: Desengrasante concentrado para cocinas
+  Marca: SuperClean
+  category: Desengrasantes
+>>>>>>> Stashed changes

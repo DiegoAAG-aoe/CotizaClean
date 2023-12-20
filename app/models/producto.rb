@@ -9,14 +9,14 @@ class Producto < ApplicationRecord
 
   ORDER_BY = {
     newest: "created_at DESC",
-    expensive: "Precio DESC",
-    cheapest: "Precio ASC"
+    expensive: "precio DESC",
+    cheapest: "precio ASC"
   }
 
   has_one_attached :photo
   validates :Nombre, presence: true
   validates :Descripcion, presence: true
-  validates :Precio, presence: true
+  validates :precio, presence: true
 
   belongs_to :category
 

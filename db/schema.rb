@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_19_020414) do
   create_table "productos", force: :cascade do |t|
     t.text "Nombre", null: false
     t.string "Tipo"
-    t.integer "Precio", null: false
+    t.integer "precio", null: false
     t.text "Descripcion", null: false
     t.text "Marca"
     t.datetime "created_at", null: false
