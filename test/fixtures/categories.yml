@@ -8,3 +8,29 @@ Detergentes:
   
 Floors and Furniture:
   name: Pisos y Muebles
+
+Blanqueadores:
+  name: Blanqueador
+
+Desinfectantes:
+  name: Desinfectante
+
+Detergentes:
+  name: Detergente
+
+Quitamanchas:
+  name: Quitamancha
+
+Desengrasantes:
+  name: Desengrasante
+
+Baño:
+  name: Baños
+
+Ambientadores:
+  name: Ambientador
+
+Limpia Hornos:
+  name: LimpiaHorno
+
+

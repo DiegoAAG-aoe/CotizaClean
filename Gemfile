@@ -42,6 +42,12 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Full Text Search para postgresql
+gem "pg_search", "~> 2.3"
+
+# Paginación Automática de productos
+gem "pagy", "~> 6.2"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -72,4 +78,4 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 
-gem "pg_search", "~> 2.3"
+
