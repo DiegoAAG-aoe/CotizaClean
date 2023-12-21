@@ -18,6 +18,8 @@ class Producto < ApplicationRecord
   validates :Descripcion, presence: true
   validates :precio, presence: true
 
+  has_many :favoritos, dependent: :destroy
+
   belongs_to :category
 
 end
