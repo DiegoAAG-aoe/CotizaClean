@@ -1,0 +1,5 @@
+<% if producto.favorito %>
+    <%= link_to 'Quitar de Favoritos💔', favorito_path(producto.id), data: { turbo_method: :delete }  %>
+<% else %>
+    <%= link_to 'Añadir a Favoritos❤️', favoritos_path(producto_id: producto.id), data: { turbo_method: :post }  %>
+<% end %>

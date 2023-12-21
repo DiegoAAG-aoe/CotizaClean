@@ -4,13 +4,21 @@ class FavoritosController < ApplicationController
   end
 
   def create
-    producto.favorito!
-    redirect_to producto_path(producto)
+    producto.favorito!(user: Current.user)
+    respond_to do |format|
+      format.html do
+        redirect_to producto_path(producto)
+      end
+    end
   end
 
   def destroy
     producto.unfavorito!
-    redirect_to producto_path(producto), status: :see_other
+    respond_to do |format|
+      format.html do
+        redirect_to producto_path(producto), status: :see_other
+      end
+    end
   end
 
   private
