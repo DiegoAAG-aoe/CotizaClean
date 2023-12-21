@@ -11,11 +11,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-cyan-200">
+  <body class="bg-cyan-200 ">
     <%= render 'shared/flash' %>
     <%= render 'shared/header' %>
     <div class="lg:container lg:mx-auto">
     <%= yield %>
+    
     </div>
+    <%= render 'shared/footer' %>
   </body>
+  
 </html>

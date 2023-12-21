@@ -1,42 +1,46 @@
-<%= form_with model: @producto do |form| %>
-    <% @producto.errors.full_messages.each do |error| %>
-        <div>
-            <%= error %>
-        </div>
-    <% end %>
-    <div>
-        <%= form.label :Nombre%>
-        <%= form.text_field :Nombre%>
+<%= form_with model: @producto, html: { class: 'max-w-md mx-auto mt-8' } do |form| %>
+  <% @producto.errors.full_messages.each do |error| %>
+    <div class="mb-2 text-red-500">
+      <%= error %>
     </div>
+  <% end %>
 
-    <div>
-        <%= form.label :Tipo%>
-        <%= form.text_area :Tipo%>
-    </div>
+  <div class="mb-4">
+    <%= form.label :Nombre, class: 'block text-gray-700 text-sm font-bold mb-2' %>
+    <%= form.text_field :Nombre, class: 'w-full p-2 border rounded-md' %>
+  </div>
 
-    <div>
-        <%= form.label :Descripcion%>
-        <%= form.text_area :Descripcion%>
-    </div>
+  <div class="mb-4">
+    <%= form.label :Tipo, class: 'block text-gray-700 text-sm font-bold mb-2' %>
+    <%= form.text_area :Tipo, class: 'w-full p-2 border rounded-md' %>
+  </div>
 
-    <div>
-        <%= form.label :precio%>
-        <%= form.number_field :precio%>
-    </div>
+  <div class="mb-4">
+    <%= form.label :Descripcion, class: 'block text-gray-700 text-sm font-bold mb-2' %>
+    <%= form.text_area :Descripcion, class: 'w-full p-2 border rounded-md' %>
+  </div>
 
-    <div>
-        <%= form.label :Marca%>
-        <%= form.text_area :Marca%>
-    </div>
+  <div class="mb-4">
+    <%= form.label :precio, class: 'block text-gray-700 text-sm font-bold mb-2' %>
+    <%= form.number_field :precio, class: 'w-full p-2 border rounded-md' %>
+  </div>
 
-    <div>
-        <%= form.label :photo%>
-        <%= form.file_field :photo%>
-    </div>
-    <div>
-        <%= form.label :category_id%>
-        <%= form.number_field :category_id%>
-    </div>
+  <div class="mb-4">
+    <%= form.label :Marca, class: 'block text-gray-700 text-sm font-bold mb-2' %>
+    <%= form.text_area :Marca, class: 'w-full p-2 border rounded-md' %>
+  </div>
 
-    <%= form.submit %>
+  <div class="mb-4">
+    <%= form.label :photo, class: 'block text-gray-700 text-sm font-bold mb-2' %>
+    <%= form.file_field :photo, class: 'w-full p-2 border rounded-md' %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :category_id, class: 'block text-gray-700 text-sm font-bold mb-2' %>
+    <%= form.number_field :category_id, class: 'w-full p-2 border rounded-md' %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.submit class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' %>
+  </div>
 <% end %>
