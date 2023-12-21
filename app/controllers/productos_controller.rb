@@ -44,7 +44,7 @@ class ProductosController < ApplicationController
   end
 
   def producto_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favoritos)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favoritos, :user_id)
   end
 
   def producto

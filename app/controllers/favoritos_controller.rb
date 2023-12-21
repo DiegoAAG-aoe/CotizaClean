@@ -4,11 +4,15 @@ class FavoritosController < ApplicationController
   end
 
   def create
-    producto.favorito!(user: Current.user)
+    producto.favorito!
     respond_to do |format|
       format.html do
         redirect_to producto_path(producto)
       end
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.replace(" favorito ", partial: "productos/favorito", locals: { producto: producto })
+      end
+
     end
   end
 
@@ -17,6 +21,9 @@ class FavoritosController < ApplicationController
     respond_to do |format|
       format.html do
         redirect_to producto_path(producto), status: :see_other
+      end
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.replace(" favorito ", partial: "productos/favorito", locals: { producto: producto })
       end
     end
   end
