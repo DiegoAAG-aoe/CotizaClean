@@ -4,7 +4,29 @@ LimpiaVidrios:
   name: Limpiavidrios
 
 Detergentes:
-  name: Antigrasa
+  name: Detergente
   
 Floors and Furniture:
   name: Pisos y Muebles
+
+Blanqueadores:
+  name: Blanqueador
+
+Desinfectantes:
+  name: Desinfectante
+
+Quitamanchas:
+  name: Quitamancha
+
+Desengrasantes:
+  name: Desengrasante
+
+Baño:
+  name: Baños
+
+Ambientadores:
+  name: Ambientador
+
+Limpia Hornos:
+  name: Limpia Horno
+

@@ -12,12 +12,13 @@ class ProductosController < ApplicationController
   end
   def create
     @producto = Producto.new(producto_params)
+
     pp @producto
 
     if @producto.save
       redirect_to productos_path, notice: 'Tu producto se ha creado correctamente'
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
   def edit
@@ -40,11 +41,11 @@ class ProductosController < ApplicationController
   private
 
   def producto_params
-    params.require(:producto).permit(:Nombre, :Tipo, :Descripcion, :precio, :Marca, :photo, :category_id)
+    params.require(:producto).permit(:Nombre, :Tipo, :Descripcion, :precio, :Marca, :photo)
   end
 
   def producto_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favoritos, :user_id)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favoritos)
   end
 
   def producto
