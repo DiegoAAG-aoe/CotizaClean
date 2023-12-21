@@ -10,11 +10,11 @@
 
 <span class='precio'>$<%= @producto.precio %></span>
 
-<%= link_to 'Editar producto', edit_producto_path(@producto) if current_user %>
+<% if current_user && current_user.admin? %>
+<%= link_to 'Editar producto', edit_producto_path(@producto) %>
 
-<%= link_to 'Eliminar producto', producto_path(@producto), data: { turbo_method: :delete, turbo_confirm: '¿Estás seguro?' } if current_user %>
-
+<%= link_to 'Eliminar producto', producto_path(@producto), data: { turbo_method: :delete, turbo_confirm: '¿Estás seguro?' }  %>
+<% end %>
 <%= render partial: 'favorito' , locals: { producto: @producto } %>
-
 <div data-controller="websocket-product" data-productoid="<%= @producto.id %>"></div>
 

@@ -5,7 +5,9 @@
     <div>
         <%= link_to 'Favoritos', favoritos_path, class: "mx-2 text-black font-bold hover:bg-color-cyan-200" if current_user %>
         <%= link_to 'Productos', productos_path, class: "mx-2 text-black font-bold hover:bg-color-cyan-200" %>
+        <% if current_user && current_user.admin? %>
         <%= link_to 'Añadir Producto', new_producto_path, class: "mx-2 text-black font-bold hover:bg-color-cyan-200" if current_user %>
+        <% end %>
         <%= link_to 'Categorias', categories_path, class: "mx-2 text-black font-bold hover:bg-color-cyan-200" if current_user %>
         <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete, class: "mx-2 text-black font-bold hover:bg-color-cyan-200" if current_user %>
         <%= link_to "Login", new_user_session_path, class: "mx-2 text-black font-bold hover:bg-color-cyan-200"  unless current_user %>
