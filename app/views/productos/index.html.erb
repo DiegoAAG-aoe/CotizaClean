@@ -16,10 +16,10 @@
 
     <%= render partial: 'category', collection: @categories %>
   </div>
-  <%= turbo_frame_tag :productos do %>
-    <%= turbo_frame_tag "productos-#{@pagy.page}", class: 'productos flex flex-col w-full' do %>
+  <%= turbo_frame_tag :productos, class: "flex flex-col m-2" do %>
+    <%= turbo_frame_tag "productos-#{@pagy.page}", class: 'productos flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2' do %>
       <%= render partial: 'producto', collection: @productos %>
-      <%= turbo_frame_tag "productos-#{@pagy.next}", class: 'productos flex flex-col w-full', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+      <%= turbo_frame_tag "productos-#{@pagy.next}", class: 'productos flex flex-col w-full sm:flex-row sm:flex-wrap sm:gap-x-2', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
     <% end %>
   <% end %>
 <% end %>
