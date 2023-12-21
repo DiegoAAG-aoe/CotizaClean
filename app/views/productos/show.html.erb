@@ -13,7 +13,7 @@
 
 <span class='precio text-xl font-bold text-green-500 mb-4'>$<%= @producto.precio %></span>
 
-<% if current_user %>
+<% if current_user && current_user.admin? %>
   <%= link_to 'Editar producto', edit_producto_path(@producto), class: 'text-blue-500 hover:text-blue-700 mr-4' %>
   <%= link_to 'Eliminar producto', producto_path(@producto), data: { turbo_method: :delete, turbo_confirm: '¿Estás seguro?' }, class: 'text-red-500 hover:text-red-700 mr-4' %>
 <% end %>
