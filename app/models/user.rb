@@ -17,7 +17,7 @@ class User < ApplicationRecord
       # Create admin if the email matches an admin email
       user.admin = true if admin_emails.include?(user.email)
     end
-    
+
   end
 
 
@@ -27,6 +27,6 @@ class User < ApplicationRecord
 
 
   def self.admin_emails
-    ["leonardo20.nm@gmail.com", "admin2@example.com"]  # Replace with your actual admin email addresses
+    ["bakuthebest740@gmail.com", "admin2@example.com"]  # Replace with your actual admin email addresses
   end
 end
