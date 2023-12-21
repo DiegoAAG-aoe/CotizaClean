@@ -1,8 +1,9 @@
-#!/usr/bin/env sh
+#!/usr/bin/env ruby
 
-if ! gem list foreman -i --silent; then
-  echo "Installing foreman..."
-  gem install foreman
-fi
+if !Gem::Specification.find_all_by_name('foreman').any?
+  puts "Foreman gem not found. Installing..."
+  system('/usr/bin/env gem install foreman')
+end
 
-exec foreman start -f Procfile.dev "$@"
+exec '/usr/bin/env foreman start -f Procfile.dev "$@"'
+

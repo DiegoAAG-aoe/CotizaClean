@@ -114,6 +114,7 @@ GEM
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
+    foreman (0.87.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
@@ -308,6 +309,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  foreman
   importmap-rails
   jbuilder
   omniauth
@@ -328,7 +330,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.0.6p216
 
 BUNDLED WITH
    2.4.10
