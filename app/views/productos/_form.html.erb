@@ -24,14 +24,19 @@
         <%= form.number_field :precio%>
     </div>
 
-     <div>
+    <div>
         <%= form.label :Marca%>
         <%= form.text_area :Marca%>
     </div>
 
-     <div>
+    <div>
         <%= form.label :photo%>
         <%= form.file_field :photo%>
     </div>
+    <div>
+        <%= form.label :category_id%>
+        <%= form.number_field :category_id%>
+    </div>
+
     <%= form.submit %>
 <% end %>
