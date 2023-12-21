@@ -16,3 +16,5 @@
 
 <%= render partial: 'favorito' , locals: { producto: @producto } %>
 
+<div data-controller="websocket-product" data-productoid="<%= @producto.id %>"></div>
+

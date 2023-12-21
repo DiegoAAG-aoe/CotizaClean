@@ -79,3 +79,5 @@ gem "omniauth-rails_csrf_protection"
 
 
 gem "tailwindcss-rails", "~> 2.1"
+
+gem "view_component", "~> 3.8"

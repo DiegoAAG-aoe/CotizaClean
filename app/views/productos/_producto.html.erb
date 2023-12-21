@@ -1,5 +1,5 @@
   <%= link_to producto_path(producto.id), class: 'producto bg-white mb-2 rounded sm:w-[calc(33.33333%_-_.5rem)]', 'data-turbo-frame': '_top' do %>
-        <%= image_tag producto.photo, class: 'w-full h-60 object-cover' if producto.photo.attached? %>
+        <%= image_tag producto.photo.attached? ? producto.photo : 'placeholder.jpg', class: 'w-full h-60 object-cover' %>
         <div class="m-2">
           <h2><%= producto.Nombre %></h2>
           <span class="text-gray-500 text-sm mt-2"><%= producto.Descripcion %></span>
