@@ -21,7 +21,7 @@ class Producto < ApplicationRecord
   validates :precio, presence: true
 
   belongs_to :category
-  belongs_to :user, default: -> { Current.user }
+
 
   def owner?
     user_id == Current.user&.id

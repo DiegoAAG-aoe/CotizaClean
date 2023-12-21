@@ -17,9 +17,9 @@
     <%= render partial: 'category', collection: @categories %>
   </div>
   <%= turbo_frame_tag :productos do %>
-    <%= turbo_frame_tag "productos-#{@pagy.page}", class: 'productos' do %>
+    <%= turbo_frame_tag "productos-#{@pagy.page}", class: 'productos flex flex-col w-full' do %>
       <%= render partial: 'producto', collection: @productos %>
-      <%= turbo_frame_tag "productos-#{@pagy.next}", class: 'productos', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+      <%= turbo_frame_tag "productos-#{@pagy.next}", class: 'productos flex flex-col w-full', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
     <% end %>
   <% end %>
 <% end %>
