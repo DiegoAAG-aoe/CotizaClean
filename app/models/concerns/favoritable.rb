@@ -4,11 +4,11 @@ module Favoritable
     included do
       has_many :favoritos, dependent: :destroy
 
-      def favorito!
+      def favorite!
         favoritos.create(user: Current.user)
       end
 
-      def unfavorito!
+      def unfavorite!
         favorito.destroy
       end
 

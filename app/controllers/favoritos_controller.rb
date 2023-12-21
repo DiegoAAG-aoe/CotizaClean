@@ -4,7 +4,7 @@ class FavoritosController < ApplicationController
   end
 
   def create
-    producto.favorito!
+    producto.favorite!
     respond_to do |format|
       format.html do
         redirect_to producto_path(producto)
@@ -17,7 +17,7 @@ class FavoritosController < ApplicationController
   end
 
   def destroy
-    producto.unfavorito!
+    producto.unfavorite!
     respond_to do |format|
       format.html do
         redirect_to producto_path(producto), status: :see_other
