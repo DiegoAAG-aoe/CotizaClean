@@ -1,25 +1,7 @@
 class ProductosController < ApplicationController
   def index
-    pp params[:category_id]
     @categories = Category.order(name: :asc).load_async
-    @productos = Producto.with_attached_photo.load_async
-    if params[:category_id]
-      @productos = @productos.where(category_id: params[:category_id])
-    end
-    if params[:min_price].present?
-      @productos = @productos.where("Precio >= ?", params[:min_price])
-    end
-    if params[:max_price].present?
-      @productos = @productos.where("Precio <= ?", params[:max_price])
-    end
-    if params[:query_text].present?
-      @productos = @productos.search_full_text(params[:query_text])
-    end
-
-      order_by = Producto::ORDER_BY.fetch(params[:order_by]&.to_sym, Producto::ORDER_BY[:newest])
-
-      @productos = @productos.order(order_by).load_async
-
+    @pagy, @productos = pagy_countless(FindProductos.new.call(producto_params_index).load_async, items: 6)
   end
 
   def show
@@ -62,7 +44,7 @@ class ProductosController < ApplicationController
   end
 
   def producto_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favoritos)
   end
 
   def producto

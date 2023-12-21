@@ -4,6 +4,7 @@
 
 <%= favicon_link_tag 'cotizaclean.ico' %>
 
+<%= link_to 'Favoritos', favoritos_path if current_user %>
 <%= link_to 'Productos', productos_path %>
 <%= link_to 'Añadir Producto', new_producto_path if current_user %>
 <%= link_to 'Categorias', categories_path if current_user %>
